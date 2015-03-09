@@ -1,0 +1,17 @@
+{
+    "title": "Android",
+    "description": "hapi android",
+    "order": [
+        "Introduction",
+        "Transactions",
+        "Device management",
+        "Events subscribers",
+        "Events",
+        "Objects"
+    ],
+    "specialSections": [
+        "Introduction",
+        "Getting started",
+        "Simulator"
+    ]
+}
