@@ -1,0 +1,70 @@
+[
+    {
+        "title": "Retrieve Pending Transaction",
+        "name": "retrievePendingTransaction",
+        "version": "2.4.0",
+        "description": "Retrieving a pending transaction fetches a transaction result that was lost due to unexpected disconnect between card reader and application." ,
+        "parameters": [
+        ],
+        "descriptionLists": [
+            {
+                "name": "Events invoked",
+                "elements": [
+                    {
+                        "name": "responseStatus",
+                        "description": "Invoked during the operation with different statuses from the card reader."
+                    },
+                    {
+                        "name": "responseError",
+                        "description": "Invoked to inform when an error response happens."
+                    },
+                    {
+                        "name": "responseRecoveredTransactionStatus",
+                        "description": "Invoked when the card reader has returned a recovered transaction."
+                    }
+                ]
+            },
+            {
+                "name": "Returns",
+                "elements": [
+                    {
+                        "name": "Boolean",
+                        "description": "YES if operation starts successfully"
+                    }
+                ]
+            },
+            {
+                "name": "Card Reader Requirements",
+                "elements": [
+                    {
+                        "name": "Version Requirements",
+                        "description": "Card reader software v1.7.0+ and v2.1.7+ is required in order for this method to work."
+                    }
+                ]
+            },
+            {
+                "name": "Notes",
+                "elements": [
+                    {
+                        "name": "On starting a new transaction",
+                        "description": "If a new transaction is started with out first fetching a pending transaction result, then the pending transaction result will be discarded."
+                    },
+                    {
+                        "name": "User notifications while a transaction result is pending",
+                        "description": "The card reader will not give any visible indication that a transaction result is pending."
+                    },
+                    {
+                        "name": "User notifications when fetching a pending transaction result",
+                        "description": "The card reader will briefly display a message when a pending transaction result is recovered."
+                    }
+                ]
+            }
+        ],
+        "order": "6",
+        "type": "method",
+        "example": {
+            "code": "//retrievePendingTransaction:\n//Called when a pending transaction is discovered upon connecting to a specific card reader\n- (void)didConnect:(id&lt;HeftClient&gt;)client{\n\theftClient = client;\n\n\tif(heftClient){\n\t\tif([heftClient isTransactionResultPending] == YES) {\n\t\t\t// a pending transaction has been detected ...\n\t\t\t// ... so, lets get it\n\t\t\t[heftClient retrievePendingTransaction];\n\t\t}\n\t}\n}",
+            "language": "objectivec"
+        }
+    }
+]

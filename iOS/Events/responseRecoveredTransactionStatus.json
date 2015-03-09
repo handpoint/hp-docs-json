@@ -1,0 +1,33 @@
+[
+    {
+        "title": "responseRecoveredTransactionStatus",
+        "name": "responseRecoveredTransactionStatus",
+        "version": "2.4.0",
+        "description": "Notifies that a transaction has been recovered.<br/><br/>This method is <b>OPTIONAL</b> and only required if <a href='#elem_retrievePendingTransaction'>retrievePendingTransaction</a> will be called.",
+        "parameters": [
+            {
+                "name": "info",
+                "type": "FinanceResponseInfo",
+                "validation": "Required",
+                "notes": "Information about the recovered transaction status.<br/><br/><b>If an attempt was made to recover a transaction when none was pending then this parameter WILL be nil.</b>"
+            }
+        ],
+        "descriptionLists": [
+            {
+                "name": "Card Reader Requirements",
+                "elements": [
+                    {
+                        "name": "Version Requirements",
+                        "description": "Card reader software v1.7.0+ and v2.1.7+ is required in order for this response to be received."
+                    }
+                ]
+            }
+        ],
+        "order": "12",
+        "type": "method",
+        "example": {
+            "code": "//responseRecoveredTransactionStatus:\n//Called when a pending transaction result has been recovered from the card reader\n- (void)responseRecoveredTransactionStatus:(id&lt;FinanceResponseInfo&gt;)info{\n\tif(info != nil) {\n\t\tif(info.statusCode == EFT_PP_STATUS_SUCCESS) {\n\t\t\tNSLog(info.status);\n\t\t\tNSLog(info.customerReceipt);\n\t\t\tNSLog(info.merchantReceipt);\n\t\t\t// print receipts and/or save receipts in transaction log\n\n\t\t\tif(info.financialResult == EFT_FINANC_STATUS_TRANS_APPROVED){\n\t\t\t\t// Process recovered authorized transaction result\n\t\t\t} else if(info.financialResult == EFT_FINANC_STATUS_TRANS_DECLINED) {\n\t\t\t\t// Process recovered declined transaction result\n\t\t\t}\n\t\t} else if(info.statusCode != EFT_PP_STATUS_NO_DATA_AVAILABLE) {\n\t\t\t// some other error was detected while waiting for a pending transaction result\n\t\t}\n\t}\n\t// else a pending transaction result was not found on the card reader\n}\n",
+            "language": "objectivec"
+        }
+    }
+]

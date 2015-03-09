@@ -1,0 +1,132 @@
+[
+    {
+        "title": "FinanceResponseInfo",
+        "name": "FinanceResponseInfo",
+        "version": "2.4.0",
+        "description": "A FinanceResponseInfo is passed to the responseFinanceStatus delegate at the end of transaction. It contains all necessary information needed about the relevant transaction. FinanceResponseInfo inherits from ResponseInfo so it includes the status string and xml dictionary in addition to authorisedAmount, transactionId and the html formatted string customerReceipt. ",
+        "properties": [
+            {
+                "name": "statusCode",
+                "type": "int",
+                "description": "A numerical representation of the status.",
+                "accessorType": "get"
+            },
+            {
+                "name": "status",
+                "type": "Status as NSString",
+                "description": "Financial transaction status message.",
+                "accessorType": "get"
+            },
+            {
+                "name": "xml",
+                "type": "XML as NSDictionary",
+                "description": " Feedback with xml details about transaction from the card reader.",
+                "accessorType": "get"
+            },
+            {
+                "name": "financialResult",
+                "type": "NSInteger",
+                "description": "A numerical representation of a financial status result.<br/><br/><table><tr><th>Status</th><th>Value</th></tr><tr><td>EFT_FINANC_STATUS_UNDEFINED</td><td>0x00</td></tr><tr><td>EFT_FINANC_STATUS_TRANS_APPROVED</td><td>0x01</td></tr><tr><td>EFT_FINANC_STATUS_TRANS_DECLINED</td><td>0x02</td></tr><tr><td>EFT_FINANC_STATUS_TRANS_PROCESSED</td><td>0x03</td></tr><tr><td>EFT_FINANC_STATUS_TRANS_NOT_PROCESSED</td><td>0x04</td></tr><tr><td>EFT_FINANC_STATUS_TRANS_CANCELLED</td><td>0x05</td></tr></table>",
+                "accessorType": "get"
+            },
+            {
+                "name": "isRestarting",
+                "type": "BOOL",
+                "description": "Indicates whether the card reader is about to restart or not (usually indicated after a software update was received on the card reader).<br/><br/>If a restart is indicated then you have 2 seconds to start fetching the logs (before the card reader restarts).<br/><br/>After fetching the logs you should disconnect from the card reader and wait for it to be visible again.",
+                "accessorType": "get"
+            },
+            {
+                "name": "authorisedAmount",
+                "type": "NSInteger",
+                "description": "In the smallest unit for the given CurrencyCode - for the transaction. ISO 4217 defines number of digits in fractional part of currency for every currency code. Example 1000 in the case where CurrencyCode is \"0826\" (GBP) the amount would be 10.00 pounds or 1000 pense.",
+                "accessorType": "get"
+            },
+            {
+                "name": "transactionId",
+                "type": "NSString",
+                "description": "The id of current transaction.",
+                "accessorType": "get"
+            },
+            {
+                "name": "customerReceipt",
+                "type": "NSString",
+                "description": "Customer receipt of transaction from MPED in html format.",
+                "accessorType": "get"
+            },
+            {
+                "name": "merchantReceipt",
+                "type": "NSString",
+                "description": "Merchant receipt of transaction from MPED in html format.",
+                "accessorType": "get"
+            }
+        ],
+        "descriptionLists": [
+
+        ],
+        "order": "7",
+        "type": "object",
+        "example": {
+            "code": "",
+            "language": "objectivec"
+        }
+    },
+    {
+        "title": "FinanceResponseInfo",
+        "name": "FinanceResponseInfo",
+        "version": "2.2.2",
+        "description": "A FinanceResponseInfo is passed to the responseFinanceStatus delegate at the end of transaction. It contains all necessary information needed about the relevant transaction. FinanceResponseInfo inherits from ResponseInfo so it includes the status string and xml dictionary in addition to authorisedAmount, transactionId and the html formatted string customerReceipt. ",
+        "properties": [
+            {
+                "name": "statusCode",
+                "type": "int",
+                "description": "A numerical representation of the status.",
+                "accessorType": "get"
+            },
+            {
+                "name": "status",
+                "type": "Status as NSString",
+                "description": "Financial transaction status message.",
+                "accessorType": "get"
+            },
+            {
+                "name": "xml",
+                "type": "XML as NSDictionary",
+                "description": " Feedback with xml details about transaction from the card reader.",
+                "accessorType": "get"
+            },
+            {
+                "name": "authorisedAmount",
+                "type": "NSInteger",
+                "description": "In the smallest unit for the given CurrencyCode - for the transaction. ISO 4217 defines number of digits in fractional part of currency for every currency code. Example 1000 in the case where CurrencyCode is \"0826\" (GBP) the amount would be 10.00 pounds or 1000 pense.",
+                "accessorType": "get"
+            },
+            {
+                "name": "transactionId",
+                "type": "NSString",
+                "description": "The id of current transaction.",
+                "accessorType": "get"
+            },
+            {
+                "name": "customerReceipt",
+                "type": "NSString",
+                "description": "Customer receipt of transaction from MPED in html format.",
+                "accessorType": "get"
+            },
+            {
+                "name": "merchantReceipt",
+                "type": "NSString",
+                "description": "Merchant receipt of transaction from MPED in html format.",
+                "accessorType": "get"
+            }
+        ],
+        "descriptionLists": [
+
+        ],
+        "order": "7",
+        "type": "object",
+        "example": {
+            "code": "",
+            "language": "objectivec"
+        }
+    }
+]
