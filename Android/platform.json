@@ -3,6 +3,7 @@
     "description": "hapi android",
     "order": [
         "Introduction",
+        "Simulator",
         "Transactions",
         "Device management",
         "Events subscribers",

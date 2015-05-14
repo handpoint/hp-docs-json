@@ -3,7 +3,7 @@
         "title": "Cancel transaction",
         "name": "CancelRequest",
         "version": "1.1.7",
-        "description": "This method attempts to cancel the current transaction on the card reader. Note that operations cannot be cancelled at certain points during the transaction process",
+        "description": "This method attempts to cancel the current transaction on the card reader. Note that operations can only be cancelled before requests are sent to the gateway. There is a flag called <a href=\"#elem_statusInfo\">cancelAllowed</a> in the <a href=\"#elem_currentTransactionStatus\">currentTransactionStatus</a> event that can be used to check if the transaction is in a state that allows cancel.",
         "parameters": [
             {
                 "name": "device",

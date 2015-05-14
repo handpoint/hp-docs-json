@@ -3,6 +3,7 @@
     "description": "hapi Windows",
     "order": [
         "Introduction",
+        "Simulator",
         "Transactions",
         "Device management",
         "Events subscribers",

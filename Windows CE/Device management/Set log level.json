@@ -1,7 +1,7 @@
 [
     {
         "title": "Set logging level",
-        "name": "setLogLevel",
+        "name": "SetLogLevel",
         "version": "1.1.7",
         "description": "Sets the log level (info, debug...) for both the card reader and the API. Note : At the end of a transaction, the card reader logs are always automatically fetched to the API.",
         "parameters": [
@@ -47,7 +47,7 @@
     },
     {
         "title": "Set logging level",
-        "name": "setLogLevel",
+        "name": "SetLogLevel",
         "version": "1.1.2",
         "description": "Sets the log level of the hapi for both the device and the API.",
         "parameters": [

@@ -3,7 +3,7 @@
         "title": "Signature result",
         "name": "SignatureResult",
         "version": "1.1.7",
-        "description": "A signatureRequest event is invoked during transaction when signature verification is needed (f.ex when payment is done with a magstripe card). The merchant is required to ask the cardholder for signature and approve (or disapprove) the signature. signatureResult tells the card reader if the signature was approved by passing true in the method. To disapprove then false is passed.",
+        "description": "A <a href=\"#elem_signatureRequired\">signatureRequired</a> event is invoked during transaction when signature verification is needed (f.ex when payment is done with a magstripe card). The merchant is required to ask the cardholder for signature and approve (or disapprove) the signature. signatureResult tells the card reader if the signature was approved by passing true in the method. To disapprove then false is passed.",
         "parameters": [
             {
                 "name": "accepted",

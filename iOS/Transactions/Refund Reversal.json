@@ -53,7 +53,7 @@
                 "elements": [
                     {
                         "name": "Boolean",
-                        "description": "true if the operation was successfully sent to device"
+                        "description": "YES if the operation was successfully sent to device"
                     }
                 ]
             }

@@ -2,7 +2,7 @@
         "title": "Transaction Result",
         "name": "TransactionResult",
         "version": "3.2.2",
-        "description": "A class holding information about a transaction result.",       
+        "description": "An object holding information about a transaction result.",
         "properties": [
             {
                 "name": "StatusMessage",

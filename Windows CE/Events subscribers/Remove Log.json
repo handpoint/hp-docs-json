@@ -18,7 +18,7 @@
                 "elements": [
                     {
                         "name": "Boolean",
-                        "description": "true if the new listener was removed successfully"
+                        "description": "true if the listener was removed successfully"
                     }
                 ]
             }

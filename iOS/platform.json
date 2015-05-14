@@ -3,6 +3,7 @@
     "description": "Handpoint iOS Sdk",
     "order": [
         "Introduction",
+        "Simulator",
         "Transactions",
         "Device management",
         "Events",
