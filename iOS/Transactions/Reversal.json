@@ -27,7 +27,7 @@
                 "name": "transaction",
                 "type": "NSString*",
                 "validation": "Required",
-                "notes": "string for customer reference"
+                "notes": "TransactionID of the sale transaction to be voided"
             }
         ],
         "descriptionLists": [

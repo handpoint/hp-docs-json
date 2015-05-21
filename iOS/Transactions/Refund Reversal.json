@@ -24,10 +24,10 @@
                 "notes": "YES if cardholder is present - NO otherwise"
             },
             {
-                "name": "reference",
+                "name": "transaction",
                 "type": "NSString*",
-                "validation": "Optional",
-                "notes": "string for customer reference"
+                "validation": "Required",
+                "notes": "TransactionID of the refund transaction to be voided"
             }
         ],
         "descriptionLists": [
